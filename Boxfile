@@ -10,11 +10,10 @@ web1:
         - curl
 
     after_build:
-        - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar -q install"
+        - "curl -s http://getcomposer.org/installer | php > /dev/null"
 
     before_deploy:
         - "rm -Rf output_prod/*"
-        - "ls -la vendor"
-        - "ls -la ."
+        - "php composer.phar -q install"
         - "php vendor/bin/sculpin --env=prod cache:clear"
         - "php vendor/bin/sculpin --env=prod generate"

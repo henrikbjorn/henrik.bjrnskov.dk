@@ -7,7 +7,7 @@ permalink: symfony2-security-configuration-tip/
 Earlier when playing around with the Security component and SecurityBundle i found that for all paths you can specify a route name
 and the component will match it when check for the request paths. The following example shows how easy it is.
 
-   # app/config/security.yml
+    # app/config/security.yml
     security:
         firewalls:
             default:

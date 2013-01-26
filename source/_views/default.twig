@@ -8,33 +8,13 @@
     <link rel="stylesheet" href="/stylesheets/skeleton.css">
     <link rel="stylesheet" href="/stylesheets/layout.css">
     <link rel="stylesheet" href="/stylesheets/page.css">
-    <link rel="stylesheet" href="/stylesheets/tomorrow-night.css">
 
     <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Henrik Bjrnskov">
 
-    <script src="/google-code-prettify/prettify.js"></script>
-    <script src="/google-code-prettify/lang-yaml.js"></script>
-    <script src="/google-code-prettify/lang-sql.js"></script>
-    <script src="/google-code-prettify/lang-css.js"></script>
-    <script>
-        window.onload = function () {
-            var elements = document.getElementsByTagName('pre');
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/monokai.min.css">
 
-            for (var index in elements) {
-                var element = elements[index];
-                var code = element.firstChild;
-
-                element.className = 'prettyprint linenums';
-
-                if (code && code.tagName == 'CODE') {
-                    code.className = 'lang-' + code.className;
-                }
-
-            }
-
-            prettyPrint();
-        }
-    </script>
+    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
     <div class="container">

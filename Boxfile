@@ -2,7 +2,6 @@ web1:
     document_root: "_output_prod"
 
     shared_writable_dirs:
-        - "output_prod"
         - "app/cache"
         - "vendor"
 
@@ -15,5 +14,6 @@ web1:
 
     before_deploy:
         - "rm -Rf output_prod/*"
-        - "php ./vendor/bin/sculpin --env=prod cache:clear"
-        - "php ./vendor/bin/sculpin --env=prod generate"
+        - "ls -la vendor/bin"
+        - "php vendor/bin/sculpin --env=prod cache:clear"
+        - "php vendor/bin/sculpin --env=prod generate"

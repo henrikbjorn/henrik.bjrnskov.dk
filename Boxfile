@@ -17,5 +17,5 @@ web1:
     before_deploy:
         - "rm -Rf output_prod/*"
         - "php composer.phar -q install"
-        - "php vendor/bin/sculpin --env=prod cache:clear"
-        - "php vendor/bin/sculpin --env=prod generate"
+        - "php vendor/bin/sculpin --no-debug --env=prod -q cache:clear"
+        - "php vendor/bin/sculpin --no-debug --env=prod -q generate"

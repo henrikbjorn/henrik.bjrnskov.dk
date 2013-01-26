@@ -2,8 +2,5 @@
     "minimum-stability" : "dev",
     "require" : {
         "sculpin/sculpin" : "~2.0"
-    },
-    "config" : {
-        "bin-dir" : "bin"
     }
 }

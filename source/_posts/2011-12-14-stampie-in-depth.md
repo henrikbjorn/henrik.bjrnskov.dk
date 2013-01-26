@@ -31,26 +31,24 @@ object.
 The service provider we will use is [SendGrid](http://sendgrid.com).
 SendGrid is one of many providers supported.
 
-``` php
-<?php
+    <?php
 
-// stampie.phar sets up autoloading with spl_autoload_register
-require '/path/to/stampie.phar';
+    // stampie.phar sets up autoloading with spl_autoload_register
+    require '/path/to/stampie.phar';
 
-class Message extends \Stampie\Message
-{
-    public function getFrom() { return 'alias@domain.tld'; }
-    public function getSubject() { return 'You are trying out Stampie'; }
-    public function getText() { return 'So what do you think about it?'; }
-}
+    class Message extends \Stampie\Message
+    {
+        public function getFrom() { return 'alias@domain.tld'; }
+        public function getSubject() { return 'You are trying out Stampie'; }
+        public function getText() { return 'So what do you think about it?'; }
+    }
 
-$adapter = new Stampie\Adapter\Buzz(new Buzz\Browser());
-$mailer = new Stampie\Mailer\SendGrid($adapter, 'username:password');
+    $adapter = new Stampie\Adapter\Buzz(new Buzz\Browser());
+    $mailer = new Stampie\Mailer\SendGrid($adapter, 'username:password');
 
-// Returns Boolean true on success or throws an HttpException for error
-// messages not recognized by SendGrid api or ApiException for known errors.
-$mailer->send(new Message('reciever@domain.tld'));
-```
+    // Returns Boolean true on success or throws an HttpException for error
+    // messages not recognized by SendGrid api or ApiException for known errors.
+    $mailer->send(new Message('reciever@domain.tld'));
 
 ## Internals
 

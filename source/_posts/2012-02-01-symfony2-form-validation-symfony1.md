@@ -11,68 +11,66 @@ The `FormTypeInterface::getDefaultOptions(array $options)` have an option called
 
 An example is always better than a 1000 words (well most of the time) so here is a full blown example of a `SessionType`.
 
-``` php
-<?php
+    <?php
 
-namespace Foobar\BarBundle\Form;
+    namespace Foobar\BarBundle\Form;
 
-use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilder;
+    use Symfony\Component\Form\AbstractType;
+    use Symfony\Component\Form\FormBuilder;
 
-use Symfony\Component\Validator\Constraints\Collection;
-use Symfony\Component\Validator\Constraints\NotBlank;
-use Symfony\Component\Validator\Constraints\Email;
-use Symfony\Component\Validator\Constraints\Choice;
-
-/**
- * @author Henrik Bjornskov <henrik@bjrnskov.dk>
- */
-class SessionType extends AbstractType
-{
-    /**
-     * @param FormBuilder $builder
-     * @param array $options
-     */
-    public function buildForm(FormBuilder $builder, array $options)
-    {
-        $builder
-            ->add('_username', 'text')
-            ->add('_password', 'password')
-            ->add('_remember_me', 'checkbox')
-        ;
-    }
+    use Symfony\Component\Validator\Constraints\Collection;
+    use Symfony\Component\Validator\Constraints\NotBlank;
+    use Symfony\Component\Validator\Constraints\Email;
+    use Symfony\Component\Validator\Constraints\Choice;
 
     /**
-     * @return array
+     * @author Henrik Bjornskov <henrik@bjrnskov.dk>
      */
-    public function getDefaultOptions(array $options)
+    class SessionType extends AbstractType
     {
-        return array(
-            'intention' => 'authenticate',
-            'validation_constraint' => new Collection(array(
-                'fields' => array(
-                    '_username' => array(
-                        new NotBlank(),
-                        new Email(),
-                    ),
-                    '_password' => new NotBlank(),
-                    '_remember_me' => new Choice(array(
-                        'choices' => array(
-                            true,
-                            false,
+        /**
+         * @param FormBuilder $builder
+         * @param array $options
+         */
+        public function buildForm(FormBuilder $builder, array $options)
+        {
+            $builder
+                ->add('_username', 'text')
+                ->add('_password', 'password')
+                ->add('_remember_me', 'checkbox')
+            ;
+        }
+
+        /**
+         * @return array
+         */
+        public function getDefaultOptions(array $options)
+        {
+            return array(
+                'intention' => 'authenticate',
+                'validation_constraint' => new Collection(array(
+                    'fields' => array(
+                        '_username' => array(
+                            new NotBlank(),
+                            new Email(),
                         ),
-                    )),
-                ),
-            )),
-        );
-    }
+                        '_password' => new NotBlank(),
+                        '_remember_me' => new Choice(array(
+                            'choices' => array(
+                                true,
+                                false,
+                            ),
+                        )),
+                    ),
+                )),
+            );
+        }
 
-    /**
-     * @return string
-     */
-    public function getName()
-    {
-        return 'session';
+        /**
+         * @return string
+         */
+        public function getName()
+        {
+            return 'session';
+        }
     }
-}
-```

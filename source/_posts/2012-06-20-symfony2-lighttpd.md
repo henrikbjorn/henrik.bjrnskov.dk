@@ -9,36 +9,30 @@ Symfony requires.
 
 I am using php-fpm with this configuration on Ubuntu 12.04.
 
-``` text
-server.modules += ("mod_fastcgi")
-fastcgi.server += ( ".php" =>-
-    ("localhost" => (
-            "socket" => "/tmp/php-fpm.sock"
+    server.modules += ("mod_fastcgi")
+    fastcgi.server += ( ".php" =>-
+        ("localhost" => (
+                "socket" => "/tmp/php-fpm.sock"
+            )
         )
     )
-)
-```
 
 And this is so the fully functional configuration for a Symfony2 vhost
 
-```
-$HTTP["host"] =~ "myhost\.tld" {
-    server.document-root = "/home/user/www/myhost/web"
+    $HTTP["host"] =~ "myhost\.tld" {
+        server.document-root = "/home/user/www/myhost/web"
 
-    url.rewrite-if-not-file = (
-        "^/$" => "$0",
-        "^(?!app_dev\.php/)[^\?]+(\?.*)?" => "app.php/$1$2",
-    )
-}
-```
+        url.rewrite-if-not-file = (
+            "^/$" => "$0",
+            "^(?!app_dev\.php/)[^\?]+(\?.*)?" => "app.php/$1$2",
+        )
+    }
 
 I dare everyone to do setup a Symfony2 application quicker in nginx or Apache. Also as a bonus here is a dynamic rewrite
 which will take `{project}.{username}.domain.tld` and point it into `/home/{username}/www/{project}/web`
 
-```
-server.modules += ( "mod_evhost" )
+    server.modules += ( "mod_evhost" )
 
-$HTTP["host"] =~ "\.piglet\.bjrnskov\.dk" {
-    evhost.path-pattern = "/home/%4/www/%5/web"
-}
-```
+    $HTTP["host"] =~ "\.piglet\.bjrnskov\.dk" {
+        evhost.path-pattern = "/home/%4/www/%5/web"
+    }

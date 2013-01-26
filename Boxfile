@@ -14,5 +14,7 @@ web1:
 
     before_deploy:
         - "rm -Rf output_prod/*"
+        - "ls -la vendor"
+        - "ls -la ."
         - "php vendor/bin/sculpin --env=prod cache:clear"
         - "php vendor/bin/sculpin --env=prod generate"

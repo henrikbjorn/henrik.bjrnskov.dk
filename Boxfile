@@ -1,5 +1,5 @@
 web1:
-    document_root: "_output_prod"
+    document_root: "output_prod"
 
     shared_writable_dirs:
         - "app/cache"

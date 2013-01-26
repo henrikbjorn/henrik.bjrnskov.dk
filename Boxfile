@@ -5,6 +5,7 @@ web1:
         - "app/cache"
         - "app/logs"
         - "vendor"
+        - "output_prod"
 
     php_extensions:
         - zip

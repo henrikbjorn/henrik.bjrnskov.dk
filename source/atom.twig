@@ -1,0 +1,30 @@
+---
+permalink: atom.xml
+use:
+    - posts
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title>Henrik Bjrnskov.dk</title>
+    <link href="http://henrik.bjrnskov.dk/atom.xml" rel="self"/>
+    <link href="http://henrik.bjrnskov.dk/"/>
+    <updated>{{ site.time|date("c") }}</updated>
+    <id>http://henrik.bjrnskov.dk/</id>
+    <author>
+        <name>Henrik Bjornskov</name>
+        <email>henrik@bjrnskov.dk</email>
+    </author>
+
+    {% for post in data.posts %}
+        <entry>
+            <title>{{ post.title }}</title>
+            <link href="http://henrik.bjrnskov.dk{{ post.url }}"/>
+            <updated>{{ post.date|date("c") }}</updated>
+            <id>http://henrik.bjrnskov.dk{{ post.url }}</id>
+            <content type="html">
+                <![CDATA[{{ post.content|escape("html") }}]]>
+            </content>
+        </entry>
+    {% endfor %}
+</feed>

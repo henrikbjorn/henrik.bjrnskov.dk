@@ -1,0 +1,6 @@
+{
+    "minimum-stability" : "dev",
+    "require" : {
+        "sculpin/sculpin" : "~2.0"
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ site.title }}</title>
+
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/skeleton.css">
+    <link rel="stylesheet" href="/stylesheets/layout.css">
+    <link rel="stylesheet" href="/stylesheets/page.css">
+    <link rel="stylesheet" href="/stylesheets/tomorrow-night.css">
+
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Henrik Bjrnskov">
+
+    <script src="/google-code-prettify/prettify.js"></script>
+    <script src="/google-code-prettify/lang-yaml.js"></script>
+    <script src="/google-code-prettify/lang-sql.js"></script>
+    <script src="/google-code-prettify/lang-css.js"></script>
+    <script>
+        window.onload = function () {
+            var elements = document.getElementsByTagName('pre');
+
+            for (var index in elements) {
+                var element = elements[index];
+                var code = element.firstChild;
+
+                element.className = 'prettyprint linenums';
+
+                if (code && code.tagName == 'CODE') {
+                    code.className = 'lang-' + code.className;
+                }
+
+            }
+
+            prettyPrint();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="sixteen columns">
+            <h1 class="headline"><a href="/">{{ site.title }}</a></h1>
+            <h5>{{ site.subtitle }}</h5>
+
+            <a class="phptherightway" href="http://www.phptherightway.com">
+                <img src="http://www.phptherightway.com/images/banners/btn1-120x90.png" alt="PHP: The Right Way"/>
+            </a>
+
+            <hr class="large" />
+        </header>
+
+
+        <section class="sixteen columns">
+            {% block content_wrapper %}
+                {{ block('content') }}
+            {% endblock %}
+        </section>
+
+        <footer class="sixteen columns">
+            <hr />
+
+            <p>
+                You should follow me on <a href="http://twitter.com/henrikbjorn">Twitter</a> and checkout my code on <a href="http://github.com/henrikbjorn">Github</a>.
+                But don't bother contacting me about job offers. I am happily employeed by <a href="http://peytz.dk">Peytz &amp; Co</a>.
+            </p>
+
+            <p>
+                <a href="http://www.zend.com/en/yellow-pages#show-ClientCandidateID=ZEND013110"><img src="http://static.zend.com/img/yellowpages/php5_zce_logo_new.gif" alt="" /></a>
+                <a href="http://www.zend.com/en/yellow-pages#show-ClientCandidateID=ZEND013110"><img src="http://static.zend.com/img/yellowpages/zce_php5-3_logo.gif" alt="" /></a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,5 @@
+framework:
+    secret: "unicorns-are-not-transsexual"
+
+sculpin_posts:
+    permalink: ":filename/"

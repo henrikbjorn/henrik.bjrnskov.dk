@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Symfony2: RecaptchaFieldType v2'
-permalink: symfony2-recaptcha-v2
+permalink: symfony2-recaptcha-v2/
 ---
 
 Sometime ago i wrote about the new Form framework for Symfony2 and since then it have gotten a major

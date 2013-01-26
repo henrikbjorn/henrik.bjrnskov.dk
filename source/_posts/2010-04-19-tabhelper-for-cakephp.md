@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'TabHelper for CakePHP 1.2'
-permalink: tabhelper-for-cakephp
+permalink: tabhelper-for-cakephp/
 ---
 
 Repost of a old article i wrote for the Bakery and the original [copy can be found here.][OriginalArticle]

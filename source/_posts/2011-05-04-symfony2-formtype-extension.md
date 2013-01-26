@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Symfony2: FormType extensions'
-permalink: symfony2-formtype-extension
+permalink: symfony2-formtype-extension/
 ---
 
 A couple of weeks ago the big Form component refactoring was merged into Symfony master. This changed

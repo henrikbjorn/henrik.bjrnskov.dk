@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Stampie - A Mail Library'
-permalink: stampie-a-mail-library
+permalink: stampie-a-mail-library/
 ---
 
 Please welcome [Stampie](http://github.com/henrikbjorn/Stampie) on the block. It is a small library

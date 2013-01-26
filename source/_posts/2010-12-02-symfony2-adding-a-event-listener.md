@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Symfony2: Adding a EventListener'
-permalink: symfony2-adding-a-event-listener
+permalink: symfony2-adding-a-event-listener/
 ---
 
 __Update:__ The EventDispatcher in Symfony2 have since been changed and this post is now outdated.

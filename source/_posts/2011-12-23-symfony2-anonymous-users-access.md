@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Symfony2: Only allow anonymous users access'
-permalink: symfony2-anonymous-users-access
+permalink: symfony2-anonymous-users-access/
 ---
 
 __Update:__ This have been extracted into [Vandpibe](http://github.com/henrikbjorn/vandpibe).

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: sfMongoDatabase.class.php
-permalink: sfmongodatabase
+permalink: sfmongodatabase/
 ---
 
 Just a snippet of code that i am hacking on. This have not been tested or anything but feel free

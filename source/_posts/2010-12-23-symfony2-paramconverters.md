@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Symfony2: ParamConverter''s'
-permalink: symfony2-paramconverters
+permalink: symfony2-paramconverters/
 ---
 
 __Update:__ This functionality have since been moved back to [FrameworkExtraBundle released by Sensio.][SensioFrameworkExtraBundle]

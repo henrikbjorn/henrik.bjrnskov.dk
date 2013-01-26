@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'PHP Conference UK 2010'
-permalink: php-conference-uk-2010
+permalink: php-conference-uk-2010/
 ---
 
 This is my thoughts about the PHP Conference UK 2010. It was my first conference so maybe my

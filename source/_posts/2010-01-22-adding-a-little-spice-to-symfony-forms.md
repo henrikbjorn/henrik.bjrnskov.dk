@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Adding a little spice to symfony forms'
-permalink: addding-a-little-spice-to-symfony-forms
+permalink: addding-a-little-spice-to-symfony-forms/
 ---
 
 I have always hated the formatter in symfony for forms, mostly because i never had the time to read

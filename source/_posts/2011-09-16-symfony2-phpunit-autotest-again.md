@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Symfony2: PHPUnit autotesting application (again)'
-permalink: symfony2-phpunit-autotest-again
+permalink: symfony2-phpunit-autotest-again/
 ---
 
 Last month i [wrote a post][post] with a snippet of Ruby code that would auto run a test for a given `.php` file.

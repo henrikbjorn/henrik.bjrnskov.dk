@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Symfony2: How to do a Wizard (multistep form) with Doctrine2'
-permalink: symfony2-wizard-doctrine
+permalink: symfony2-wizard-doctrine/
 ---
 
 __Update:__ The real code for our Wizard with Working example and tests have been released at [github.com/Peytz/Wizard](http://github.com/peytz/wizard)

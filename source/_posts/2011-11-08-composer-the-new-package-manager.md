@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Composer - The new package management tool'
-permalink: composer-the-new-package-manager
+permalink: composer-the-new-package-manager/
 ---
 
 Personally i have never been to found of managing PHP Packages through pear of by having some version

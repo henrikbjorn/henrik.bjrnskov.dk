@@ -1,6 +1,6 @@
 ---
 title: sfValidatedAmazonStorageFile
-permalink: sfvalidatedamazonstorage-file
+permalink: sfvalidatedamazonstorage-file/
 layout: post
 ---
 

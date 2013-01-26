@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Doctrine UUID behavior'
-permalink: doctrine-uuid-behavior
+permalink: doctrine-uuid-behavior/
 ---
 
 __Update:__ Do not use this, as it have been shown to not work because of weirdness in the way

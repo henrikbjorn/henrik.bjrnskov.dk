@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Symfony2: PHPUnit autotesting application'
-permalink: symfony2-phpunit-autotest
+permalink: symfony2-phpunit-autotest/
 ---
 
 For a long time the ruby world have had autotest which will start testing everytime a `.rb` file changes.

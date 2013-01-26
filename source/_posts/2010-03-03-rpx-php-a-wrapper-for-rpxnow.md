@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'RPX.php a wrapper for rpxnow.com'
-permalink: rpx-php-a-wrapper-for-rpxnow
+permalink: rpx-php-a-wrapper-for-rpxnow/
 ---
 
 What is RPX? Well this is from their website:

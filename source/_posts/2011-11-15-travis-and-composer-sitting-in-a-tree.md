@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Travis & Composer sitting in a tree K-I-S-S-I-N-G'
-permalink: travis-and-composer-sitting-in-a-tree
+permalink: travis-and-composer-sitting-in-a-tree/
 ---
 
 The other day the Continuous integration testing service travis-ci.org announced they had integrated

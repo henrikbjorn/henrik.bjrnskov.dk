@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Stampie an in depth look'
-permalink: stampie-an-in-depth
+permalink: stampie-an-in-depth/
 ---
 
 I must admit, my earlier post about Stampie (my email api wrapper) wasn't that 

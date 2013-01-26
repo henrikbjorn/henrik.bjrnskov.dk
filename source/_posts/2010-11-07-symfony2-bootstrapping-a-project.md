@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Symfony2: Bootstrapping a new project'
-permalink: symfony2-bootstrapping-a-project
+permalink: symfony2-bootstrapping-a-project/
 ---
 
 __Update:__ This is have since been replaced by official Symfony2 distributions. Look at symfony.com

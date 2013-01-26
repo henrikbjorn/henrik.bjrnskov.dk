@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Symfony2: Quick tip for your security configuration'
-permalink: symfony2-security-configuration-tip
+permalink: symfony2-security-configuration-tip/
 ---
 
 Earlier when playing around with the Security component and SecurityBundle i found that for all paths you can specify a route name

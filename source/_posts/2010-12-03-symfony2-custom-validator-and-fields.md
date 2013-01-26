@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Symfony2: Custom validator and fields'
-permalink: symfony2-custom-validator-and-fields
+permalink: symfony2-custom-validator-and-fields/
 ---
 
 In Symfony2 there is a new Form and Validator component that are now completly seperate and have been

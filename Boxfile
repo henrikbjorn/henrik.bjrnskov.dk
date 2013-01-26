@@ -1,0 +1,19 @@
+web1:
+    document_root: "_output_prod"
+
+    shared_writable_dirs:
+        - "output_prod"
+        - "app/cache"
+        - "vendor"
+
+    php_extensions:
+        - zip
+        - curl
+
+    after_build:
+        - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar -q install"
+
+    before_deploy:
+        - "rm -Rf output_prod/*"
+        - "php ./vendor/bin/sculpin --env=prod cache:clear"
+        - "php ./vendor/bin/sculpin --env=prod generate"

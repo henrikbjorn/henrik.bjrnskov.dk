@@ -24,7 +24,7 @@ And this is so the fully functional configuration for a Symfony2 vhost
 
         url.rewrite-if-not-file = (
             "^/$" => "$0",
-            "^(?!app_dev\.php/)[^\?]+(\?.*)?" => "app.php/$1$2",
+            "^/(?!.+\.php)[^\?]+(\?.*)?" => "app.php/$1$2",
         )
     }
 

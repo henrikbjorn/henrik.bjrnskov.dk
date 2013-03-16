@@ -1,26 +1,20 @@
 ---
 layout: default.twig
-title: Henrik Bjrnskov
+title: Posts
 use:
     - posts
 ---
  
 {% block content %}
-    <h2>Projects</h2>
-    <ul>
-        <li><a href="http://henrikbjorn.github.com/Stampie">Stampie</a> &raquo; A mailer library for online email providers such as MailGun, Postmark, Sendgrind etc.</li>
-        <li><a href="http://henrikbjorn.github.com/Raekke">Raekke</a> &raquo; A Resque like message queue for PHP</li>
-        <li><a href="http://henrikbjorn.github.com/Flint">Flint</a> &raquo; Makes Silex a bit more like Symfony2</li>
-        <li><a href="http://vandpibe.bjrnskov.dk">Vandpibe</a> &raquo; A collection of Components and Bridges for Symfony2</li>
-        <li><a href="https://github.com/peytz/wizard">Wizard</a> &raquo; Multistep form component for Symfony2</li>
-    </ul>
+    <section class="content">
+        <h1>Posts</h1>
 
-    <hr />
-
-    <h2>Blog</h2>
-    <ul>
-        {% for post in data.posts %}
-            <li><span>{{ post.date|date("j M Y") }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
+        <ul class="listing">
+            {% for post in data.posts %}
+                <li>
+                    <span>{{ post.date|date("j M Y") }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
 {% endblock %}

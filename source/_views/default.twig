@@ -1,55 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
     <meta charset="utf-8">
-    <title>{{ site.title }}</title>
+    <title>
+        {% if page.title %}
+            {{ page.title }} &ndash;
+        {% endif %}
+        {{ site.name }}
+    </title>
 
-    <link rel="stylesheet" href="/stylesheets/base.css">
-    <link rel="stylesheet" href="/stylesheets/skeleton.css">
-    <link rel="stylesheet" href="/stylesheets/layout.css">
-    <link rel="stylesheet" href="/stylesheets/page.css">
+    <meta name="author" content="{{ site.name }}" />
+    <meta name="description" content="{{ site.description }}" />
 
-    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Henrik Bjrnskov">
+    <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
 
-    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/monokai.min.css">
+    <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
+    <link media="only screen and (max-device-width: 480px)" href="/css/iphone.css" type="text/css" rel="stylesheet" />
+    <link media="only screen and (device-width: 768px)" href="/css/iphone.css" type="text/css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/application.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <header class="sixteen columns">
-            <h1 class="headline"><a href="/">{{ site.title }}</a></h1>
-            <h5>{{ site.subtitle }}</h5>
+    <section class="sidebar">
+        <a href="/">
+            <img src="{{ site.gravatar_url }}?s=150" height="75" width="75" class="avatar" />
+        </a>
 
-            <a class="phptherightway" href="http://www.phptherightway.com">
-                <img src="http://www.phptherightway.com/images/banners/btn1-120x90.png" alt="PHP: The Right Way"/>
+        <section class="name">
+            <a href="/">
+                <span id="fname">{{ site.name|split(' ')|first }}</span>
+                <span id="lname">{{ site.name|split(' ')|last }}</span>
             </a>
-
-            <hr class="large" />
-        </header>
-
-
-        <section class="sixteen columns">
-            {% block content_wrapper %}
-                {{ block('content') }}
-            {% endblock %}
         </section>
 
-        <footer class="sixteen columns">
-            <hr />
+        <section class="meta">
+            <a href="https://github.com/{{ site.github }}" target="_blank"><img src="/images/github.png" /></a>
+            <a href="https://twitter.com/{{ site.twitter }}" target="_blank"><img src="/images/twitter.png"></a>
+            <a href="/atom.xml"><img src="/images/rss.png" /></a>
+        </section>
+    </section>
 
-            <p>
-                You should follow me on <a href="http://twitter.com/henrikbjorn">Twitter</a> and checkout my code on <a href="http://github.com/henrikbjorn">Github</a>.
-                But don't bother contacting me about job offers. I am happily employeed by <a href="http://peytz.dk">Peytz &amp; Co</a>.
-            </p>
-
-            <p>
-                <a href="http://www.zend.com/en/yellow-pages#show-ClientCandidateID=ZEND013110"><img src="http://static.zend.com/img/yellowpages/php5_zce_logo_new.gif" alt="" /></a>
-                <a href="http://www.zend.com/en/yellow-pages#show-ClientCandidateID=ZEND013110"><img src="http://static.zend.com/img/yellowpages/zce_php5-3_logo.gif" alt="" /></a>
-            </p>
-        </footer>
-    </div>
+    {% block content_wrapper %}
+            {{ block('content') }}
+    {% endblock %}
 </body>
 </html>
-

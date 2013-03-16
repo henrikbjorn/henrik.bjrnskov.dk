@@ -1,14 +1,20 @@
 ---
-layout: default
-title: "Projects"
+layout: default.twig
+title: Posts
+use:
+    - posts
 ---
-
+ 
 {% block content %}
     <section class="content">
-        <h1>Projects</h1>
+        <h1>Posts</h1>
 
         <ul class="listing">
-            <li><a href="#">Stampie</a></li>
+            {% for post in data.posts %}
+                <li>
+                    <span>{{ post.date|date("j M Y") }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+            {% endfor %}
         </ul>
     </section>
 {% endblock %}

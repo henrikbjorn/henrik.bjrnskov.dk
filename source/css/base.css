@@ -200,3 +200,5 @@ a {
     font-weight: bold; }
   .content .talk-design .color .white {
     color: #fff; }
+
+pre code{overflow:scroll}

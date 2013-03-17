@@ -201,4 +201,5 @@ a {
   .content .talk-design .color .white {
     color: #fff; }
 
+.content.about {margin-bottom:0px;border-bottom:2px solid #eee}
 pre code{overflow:scroll}

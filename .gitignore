@@ -2,6 +2,3 @@ output_*
 vendor
 app/cache
 app/logs
-source/nrsysmond.cfg
-source/nrsysmond.x64
-source/supervisord.conf

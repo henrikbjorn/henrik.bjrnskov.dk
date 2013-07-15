@@ -42,7 +42,7 @@ by `ConfigServiceProvider` also you need to specific you initial routing resourc
     $app = new Silex\Application;
     $app->register(new Flint\Provider\ConfigServiceProvider);
     $app->register(new Flint\Provider\RoutingServiceProvider, array(
-        'routing.resource' => '/patg/to/routing.xml',
+        'routing.resource' => '/path/to/routing.xml',
         'routing.options' => array(
             'cache_dir' => '/path/to/cache',
         ),

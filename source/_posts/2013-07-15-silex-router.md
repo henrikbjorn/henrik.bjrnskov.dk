@@ -63,3 +63,16 @@ specifying the service id in `routing.xml` like so:
             <default key="_controller">controller_default_service</default>
         </route>
     </routes>
+
+Numbers
+-------
+
+As davedevelopment noted on #Silex some benchmarking should be done. I created a maybe naive benchmark
+where an application with cached router and an application with 100 `->get` routes are tested.
+[You can find the code here](https://gist.github.com/henrikbjorn/4bc355508299da3ebb81).
+
+    Flint\Benchmark\RouterBenchmark
+        Method Name           Iterations    Average Time      Ops/second
+        -------------------  ------------  --------------    -------------
+        routesHelperMethods: [10,000    ] [0.0001219873905] [8,197.56858]
+        routerCache        : [10,000    ] [0.0000385820866] [25,918.76410]

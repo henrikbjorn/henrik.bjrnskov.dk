@@ -50,3 +50,14 @@ If you want to learn more about Flint or more configuration features such as
 including other config files from within a json file head over to
 [the documentation](http://flint.rtfd.org).
 
+Numbers
+-------
+
+Here are some numbers that show the improvement you get by using cached config files.
+
+    Flint\Benchmark\Config\ConfiguratorBenchmark
+        Method Name                     Iterations    Average Time      Ops/second
+        -----------------------------  ------------  --------------    -------------
+        loadCachedConfigFile         : [10,000    ] [0.0000248255253] [40,281.12149]
+        loadNonCachedConfigFile      : [10,000    ] [0.0001957096338] [5,109.61050]
+        loadSimpleNonCachedConfigFile: [10,000    ] [0.0001974114180] [5,065.56313]

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Configuration files in Silex'
+published: true
 ---
 
 Lately i have been using Silex more and more. And as doing so i needed

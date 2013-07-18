@@ -5,6 +5,7 @@ api_version: 1
 threadsafe: 1
 
 handlers:
+    - { url: "/", static_files: "index.html", upload: "index.html" }
     - { url: "/(css|js)/(.*)", static_files: "\\1/\\2", upload: ".*" }
     - { url: "/(atom.xml|favicon.ico)", static_files: "\\1", upload: ".*" }
     - { url: "/(.*)/", static_files: "\\1/index.html", upload: ".*" }

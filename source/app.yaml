@@ -1,0 +1,13 @@
+application: henrik-bjrnskov-dk
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: 1
+
+handlers:
+    - { url: "/css", static_dir: "css/" }
+    - { url: "/js", static_dir: "js/" }
+    - { url: "/images/(.*)", static_files: "images/\\1", upload: "images/.*" }
+    - { url: "/atom.xml", static_files: "atom.xml", upload: "atom.xml" }
+    - { url: "/", static_files: "index.html", upload: "index.html" }
+    - { url: "/(.*)(/)?", static_files: "\\1/index.html", upload: ".*" }

@@ -1,6 +1,12 @@
 {
     "minimum-stability" : "dev",
 
+    "scripts" : {
+        "post-install-cmd" : [
+            "./vendor/bin/sculpin generate --env=prod"
+        ]
+    },
+
     "require" : {
         "sculpin/sculpin" : "~2.0@dev"
     }
